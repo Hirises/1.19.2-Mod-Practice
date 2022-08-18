@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "satisfactorymod:block/beryl_nut_bush_premature"
+  }
+}

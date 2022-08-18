@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "ripe=true": {
+      "model": "satisfactorymod:block/beryl_nut_bush_mature"
+    },
+    "ripe=false": {
+      "model": "satisfactorymod:block/beryl_nut_bush_premature"
+    }
+  }
+}

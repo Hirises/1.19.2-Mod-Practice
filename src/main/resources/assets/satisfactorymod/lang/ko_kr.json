@@ -1,0 +1,11 @@
+{
+  "item.satisfactorymod.iron_rod": "철봉",
+  "item.satisfactorymod.iron_plate": "철판",
+  "item.satisfactorymod.beryl_nut": "녹주석 너트",
+
+  "itemGroup.basic_material": "기초 재료",
+  "itemGroup.basic_structuring": "기초 구조",
+  "itemGroup.environment": "환경",
+
+  "block.satisfactorymod.foundation": "토대"
+}

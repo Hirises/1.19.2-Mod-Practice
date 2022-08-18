@@ -1,0 +1,11 @@
+{
+  "item.satisfactorymod.iron_rod": "Iron Rod",
+  "item.satisfactorymod.iron_plate": "Iron Plate",
+  "item.satisfactorymod.beryl_nut": "Beryl Nut",
+
+  "itemGroup.basic_material": "Basic Material",
+  "itemGroup.basic_structuring": "Basic Structuring",
+  "itemGroup.environment": "Environment",
+
+  "block.satisfactorymod.foundation": "Foundation"
+}

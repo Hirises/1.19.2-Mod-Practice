@@ -1,7 +1,53 @@
 {
   "variants": {
-    "": {
-      "model": "satisfactorymod:block/conveyor_mk1"
+    "input=north,output=south": {
+      "model": "satisfactorymod:block/conveyor_mk1_line",
+      "y": 0
+    },
+    "input=south,output=north": {
+      "model": "satisfactorymod:block/conveyor_mk1_line",
+      "y": 0
+    },
+    "input=east,output=west": {
+      "model": "satisfactorymod:block/conveyor_mk1_line",
+      "y": 90
+    },
+    "input=west,output=east": {
+      "model": "satisfactorymod:block/conveyor_mk1_line",
+      "y": 90
+    },
+
+    "input=south,output=east": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 270
+    },
+    "input=east,output=south": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 270
+    },
+    "input=south,output=west": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 0
+    },
+    "input=west,output=south": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 0
+    },
+    "input=north,output=east": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 180
+    },
+    "input=east,output=north": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 180
+    },
+    "input=north,output=west": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 90
+    },
+    "input=west,output=north": {
+      "model": "satisfactorymod:block/conveyor_mk1_curve",
+      "y": 90
     }
   }
 }

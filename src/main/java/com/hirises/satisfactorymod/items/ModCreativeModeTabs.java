@@ -11,7 +11,14 @@ public class ModCreativeModeTabs {
         }
     };
 
-    public static final CreativeModeTab BASIC_STRUCTURING = new CreativeModeTab("basic_structuring"){
+    public static final CreativeModeTab ORGANIZING = new CreativeModeTab("organizing"){
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(ModItems.CONVEYOR_MK1.get());
+        }
+    };
+
+    public static final CreativeModeTab STRUCTURING = new CreativeModeTab("structuring"){
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.FOUNDATION.get());

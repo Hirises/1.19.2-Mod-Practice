@@ -2,9 +2,11 @@
   "item.satisfactorymod.iron_rod": "철봉",
   "item.satisfactorymod.iron_plate": "철판",
   "item.satisfactorymod.beryl_nut": "녹주석 너트",
+  "item.satisfactorymod.conveyor_mk1": "컨베이어 마크1",
 
   "itemGroup.basic_material": "기초 재료",
-  "itemGroup.basic_structuring": "기초 구조",
+  "itemGroup.organizing": "조직화",
+  "itemGroup.structuring": "구조화",
   "itemGroup.environment": "환경",
 
   "block.satisfactorymod.foundation": "토대"

@@ -15,8 +15,13 @@ public class ModItems {
 
     public static final RegistryObject<Item> IRON_ROD = ITEMS.register("iron_rod", () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.BASIC_MATERIAL)));
     public static final RegistryObject<Item> IRON_PLATE = ITEMS.register("iron_plate", () -> new Item(new Item.Properties().tab(ModCreativeModeTabs.BASIC_MATERIAL)));
+
+    public static final RegistryObject<Item> CONVEYOR_MK1 = ITEMS.register("conveyor_mk1",
+            () -> new ItemNameBlockItem(ModBlocks.CONVEYOR_MK1.get(), new Item.Properties().tab(ModCreativeModeTabs.ORGANIZING).food(ModFoods.BERYL_NUT)));
+
     public static final RegistryObject<Item> FOUNDATION = ITEMS.register("foundation", () -> new BlockItem(ModBlocks.FOUNDATION.get(),
-            new Item.Properties().tab(ModCreativeModeTabs.BASIC_STRUCTURING)));
+            new Item.Properties().tab(ModCreativeModeTabs.STRUCTURING)));
+
     public static final RegistryObject<Item> BERYL_NUT = ITEMS.register("beryl_nut",
             () -> new ItemNameBlockItem(ModBlocks.BERYL_NUT_BUSH.get(), new Item.Properties().tab(ModCreativeModeTabs.ENVIRONMENT).food(ModFoods.BERYL_NUT)));
 

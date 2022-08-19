@@ -3,14 +3,8 @@ package com.hirises.satisfactorymod;
 import com.hirises.satisfactorymod.blocks.ModBlocks;
 import com.hirises.satisfactorymod.items.ModItems;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,9 +13,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 @Mod(SatisfactoryMod.MODID)
@@ -34,7 +25,8 @@ public class SatisfactoryMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::onCommonSetup);
+        modEventBus.addListener(this::onClientSetup);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -42,24 +34,19 @@ public class SatisfactoryMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
+    private void onCommonSetup(final FMLCommonSetupEvent event)
     {
 
+    }
+
+    public void onClientSetup(FMLClientSetupEvent event)
+    {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BERYL_NUT_BUSH.get(), RenderType.cutout());
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
 
-    }
-
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents
-    {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
-        }
     }
 }

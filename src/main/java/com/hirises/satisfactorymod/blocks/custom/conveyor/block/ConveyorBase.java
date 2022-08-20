@@ -1,28 +1,31 @@
-package com.hirises.satisfactorymod.blocks.custom.conveyor;
+package com.hirises.satisfactorymod.blocks.custom.conveyor.block;
 
+import com.hirises.satisfactorymod.blocks.custom.conveyor.entity.ConveyorBaseEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public abstract class ConveyorBlockBase extends ConveyorLikeBlockBase {
+/**
+ * 컨베이어 클래스
+ */
+public abstract class ConveyorBase extends ConveyorLikeBase {
     public static final EnumProperty<Direction> OUTPUT = EnumProperty.create("output", Direction.class, Direction.Plane.HORIZONTAL);
 
     protected static final VoxelShape NORTH_SOUTH = Block.box(2, 3, 0, 14, 8, 16);
     protected static final VoxelShape EAST_WEST = Block.box(0, 3, 2, 16, 8, 14);
 
-    public ConveyorBlockBase(Properties properties) {
+    public ConveyorBase(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(OUTPUT, Direction.SOUTH));
     }
-
-    public abstract int getItemPerMinute();
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter p_60556_, BlockPos p_60557_, CollisionContext p_60558_) {

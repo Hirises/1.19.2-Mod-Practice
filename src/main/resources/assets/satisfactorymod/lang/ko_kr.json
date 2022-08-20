@@ -9,5 +9,7 @@
   "itemGroup.structuring": "구조화",
   "itemGroup.environment": "환경",
 
-  "block.satisfactorymod.foundation": "토대"
+  "block.satisfactorymod.foundation": "토대",
+
+  "gui.satisfactorymod.conveyor_mk1": "컨베이어 마크1"
 }

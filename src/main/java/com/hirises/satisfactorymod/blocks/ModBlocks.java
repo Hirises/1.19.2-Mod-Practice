@@ -2,7 +2,7 @@ package com.hirises.satisfactorymod.blocks;
 
 import com.hirises.satisfactorymod.SatisfactoryMod;
 import com.hirises.satisfactorymod.blocks.custom.BerylNutBush;
-import com.hirises.satisfactorymod.blocks.custom.conveyor.ConveyorMk1;
+import com.hirises.satisfactorymod.blocks.custom.conveyor.block.ConveyorMk1;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;

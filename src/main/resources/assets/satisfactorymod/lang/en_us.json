@@ -8,5 +8,7 @@
   "itemGroup.structuring": "Basic Structuring",
   "itemGroup.environment": "Environment",
 
-  "block.satisfactorymod.foundation": "Foundation"
+  "block.satisfactorymod.foundation": "Foundation",
+
+  "gui.satisfactorymod.conveyor_mk1": "Conveyor Mk.1"
 }

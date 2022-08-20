@@ -62,6 +62,7 @@ public abstract class ConveyorLikeBaseEntity extends BlockEntity implements Menu
     public void onLoad() {
         super.onLoad();
         lazyItemHandler = LazyOptional.of(() -> storage);
+        tick = 0;
         super.invalidateCaps();
     }
 
@@ -95,12 +96,14 @@ public abstract class ConveyorLikeBaseEntity extends BlockEntity implements Menu
 
     public boolean isEmpty(){
         for(int i = 0; i < storage.getSlots(); i++){
-            if(storage.getStackInSlot(i).isEmpty()){
-                return true;
+            if(!storage.getStackInSlot(i).isEmpty()){
+                return false;
             }
         }
-        return false;
+        return true;
     }
+
+    public abstract List<Direction> getOutputDirections(BlockState state);
 
     public static void tick(Level level, BlockPos pos, BlockState state, ConveyorBaseEntity self){
         if(self.isEmpty()){
@@ -113,21 +116,32 @@ public abstract class ConveyorLikeBaseEntity extends BlockEntity implements Menu
     public void flowItem(Level level, BlockPos pos, BlockState state){
         tick++;
         if(tick % itemFlowTick == 0){
-            if(!storage.getStackInSlot(0).isEmpty()){
-                flowOutItem(level, pos, state);
-                moveItem();
+            if(flowOutItem(level, pos, state)){
+                tick = 0;
+            }else{
+                tick = -1;
             }
-            tick = 0;
+            moveItem();
         }
     }
 
-    public void flowOutItem(Level level, BlockPos pos, BlockState state){
-//        for(Direction dir : getOutputDirections()){
-//            BlockEntity target = level.getBlockEntity(pos.relative(dir));
-//            if(target != null && target instanceof ConveyorLikeBaseEntity){
-//
-//            }
-//        }
+    public boolean flowOutItem(Level level, BlockPos pos, BlockState state){
+        if(!storage.getStackInSlot(0).isEmpty()){
+            for(Direction dir : getOutputDirections(state)){
+                BlockEntity entity = level.getBlockEntity(pos.relative(dir));
+                if(entity != null && entity instanceof ConveyorLikeBaseEntity){
+                    ConveyorLikeBaseEntity target = (ConveyorLikeBaseEntity) entity;
+                    if(target.storage.getStackInSlot(target.storageAmount - 1).isEmpty()){
+                        target.storage.setStackInSlot(target.storageAmount - 1, storage.getStackInSlot(0));
+                        storage.setStackInSlot(0, ItemStack.EMPTY);
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public void moveItem(){

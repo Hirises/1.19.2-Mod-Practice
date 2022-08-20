@@ -1,6 +1,5 @@
 package com.hirises.satisfactorymod.blocks.custom.conveyor.entity;
 
-import com.google.common.collect.ImmutableList;
 import com.hirises.satisfactorymod.blocks.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -12,6 +11,7 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
@@ -32,12 +32,12 @@ public abstract class ConveyorLikeBaseEntity extends BlockEntity implements Menu
     public final int itemFlowCount;
     public final int storageAmount;
 
-    public ConveyorLikeBaseEntity(BlockPos pos, BlockState state){
-        this(pos, state, 20, 1, 1);
+    public ConveyorLikeBaseEntity(BlockEntityType<?> type, BlockPos pos, BlockState state){
+        this(type, pos, state, 20, 1, 1);
     }
 
-    public ConveyorLikeBaseEntity(BlockPos pos, BlockState state, int itemFlowTick, int itemFlowCount, int storageAmount) {
-        super(ModBlockEntities.CONVEYOR_MK1.get(), pos, state);
+    public ConveyorLikeBaseEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, int itemFlowTick, int itemFlowCount, int storageAmount) {
+        super(type, pos, state);
         this.itemFlowCount = itemFlowCount;
         this.itemFlowTick = itemFlowTick;
         this.storageAmount = storageAmount;

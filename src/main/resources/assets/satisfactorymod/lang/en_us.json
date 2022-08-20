@@ -3,6 +3,8 @@
   "item.satisfactorymod.iron_plate": "Iron Plate",
   "item.satisfactorymod.beryl_nut": "Beryl Nut",
   "item.satisfactorymod.conveyor_mk1": "Conveyor Mk.1",
+  "item.satisfactorymod.conveyor_mk2": "Conveyor Mk.2",
+  "item.satisfactorymod.conveyor_mk3": "Conveyor Mk.3",
 
   "itemGroup.basic_material": "Basic Material",
   "itemGroup.structuring": "Basic Structuring",
@@ -10,5 +12,7 @@
 
   "block.satisfactorymod.foundation": "Foundation",
 
-  "gui.satisfactorymod.conveyor_mk1": "Conveyor Mk.1"
+  "gui.satisfactorymod.conveyor_mk1": "Conveyor Mk.1",
+  "gui.satisfactorymod.conveyor_mk2": "Conveyor Mk.2",
+  "gui.satisfactorymod.conveyor_mk3": "Conveyor Mk.3"
 }

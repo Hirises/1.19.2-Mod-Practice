@@ -1,24 +1,15 @@
 package com.hirises.satisfactorymod.blocks.custom.conveyor.block;
 
-import com.hirises.satisfactorymod.blocks.ModBlockEntities;
-import com.hirises.satisfactorymod.blocks.ModBlocks;
-import com.hirises.satisfactorymod.blocks.custom.conveyor.entity.ConveyorBaseEntity;
-import com.hirises.satisfactorymod.blocks.custom.conveyor.entity.ConveyorLikeBaseEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * 컨베이어 클래스
@@ -63,11 +54,5 @@ public abstract class ConveyorBase extends ConveyorLikeBase {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(OUTPUT);
-    }
-
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTickerHelper(type, ModBlockEntities.CONVEYOR_MK1.get(), ConveyorLikeBaseEntity::tick);
     }
 }

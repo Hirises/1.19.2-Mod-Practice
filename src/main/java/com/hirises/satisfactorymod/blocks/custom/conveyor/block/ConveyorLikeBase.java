@@ -58,10 +58,4 @@ public abstract class ConveyorLikeBase extends BaseEntityBlock {
     public RenderShape getRenderShape(BlockState p_49232_) {
         return RenderShape.MODEL;
     }
-
-    //    @Nullable
-//    @Override
-//    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-//        return createTickerHelper(type, ModBlockEntities.CONVEYOR_MK1.get(), ConveyorBaseEntity::tick);
-//    }
 }

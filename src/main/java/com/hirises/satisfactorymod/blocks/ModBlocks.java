@@ -3,6 +3,8 @@ package com.hirises.satisfactorymod.blocks;
 import com.hirises.satisfactorymod.SatisfactoryMod;
 import com.hirises.satisfactorymod.blocks.custom.BerylNutBush;
 import com.hirises.satisfactorymod.blocks.custom.conveyor.block.ConveyorMk1;
+import com.hirises.satisfactorymod.blocks.custom.conveyor.block.ConveyorMk2;
+import com.hirises.satisfactorymod.blocks.custom.conveyor.block.ConveyorMk3;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -16,8 +18,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FOUNDATION = BLOCKS.register("foundation",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).destroyTime(3f)));
+
     public static final RegistryObject<Block> CONVEYOR_MK1 = BLOCKS.register("conveyor_mk1",
             () -> new ConveyorMk1(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().destroyTime(1f)));
+    public static final RegistryObject<Block> CONVEYOR_MK2 = BLOCKS.register("conveyor_mk2",
+            () -> new ConveyorMk2(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().destroyTime(1f)));
+    public static final RegistryObject<Block> CONVEYOR_MK3 = BLOCKS.register("conveyor_mk3",
+            () -> new ConveyorMk3(BlockBehaviour.Properties.of(Material.METAL).noOcclusion().destroyTime(1f)));
+
     public static final RegistryObject<Block> BERYL_NUT_BUSH = BLOCKS.register("beryl_nut_bush",
             () -> new BerylNutBush(BlockBehaviour.Properties.of(Material.WOOD).randomTicks().noOcclusion().destroyTime(2f)));
 

@@ -3,6 +3,8 @@
   "item.satisfactorymod.iron_plate": "철판",
   "item.satisfactorymod.beryl_nut": "녹주석 너트",
   "item.satisfactorymod.conveyor_mk1": "컨베이어 마크1",
+  "item.satisfactorymod.conveyor_mk2": "컨베이어 마크2",
+  "item.satisfactorymod.conveyor_mk3": "컨베이어 마크3",
 
   "itemGroup.basic_material": "기초 재료",
   "itemGroup.organizing": "조직화",
@@ -11,5 +13,7 @@
 
   "block.satisfactorymod.foundation": "토대",
 
-  "gui.satisfactorymod.conveyor_mk1": "컨베이어 마크1"
+  "gui.satisfactorymod.conveyor_mk1": "컨베이어 마크1",
+  "gui.satisfactorymod.conveyor_mk2": "컨베이어 마크2",
+  "gui.satisfactorymod.conveyor_mk3": "컨베이어 마크3"
 }

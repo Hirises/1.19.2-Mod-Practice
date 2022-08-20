@@ -18,6 +18,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> CONVEYOR_MK1 = ITEMS.register("conveyor_mk1",
             () -> new ItemNameBlockItem(ModBlocks.CONVEYOR_MK1.get(), new Item.Properties().tab(ModCreativeModeTabs.ORGANIZING)));
+    public static final RegistryObject<Item> CONVEYOR_MK2 = ITEMS.register("conveyor_mk2",
+            () -> new ItemNameBlockItem(ModBlocks.CONVEYOR_MK2.get(), new Item.Properties().tab(ModCreativeModeTabs.ORGANIZING)));
+    public static final RegistryObject<Item> CONVEYOR_MK3 = ITEMS.register("conveyor_mk3",
+            () -> new ItemNameBlockItem(ModBlocks.CONVEYOR_MK3.get(), new Item.Properties().tab(ModCreativeModeTabs.ORGANIZING)));
 
     public static final RegistryObject<Item> FOUNDATION = ITEMS.register("foundation", () -> new BlockItem(ModBlocks.FOUNDATION.get(),
             new Item.Properties().tab(ModCreativeModeTabs.STRUCTURING)));

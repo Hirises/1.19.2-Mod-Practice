@@ -1,7 +1,6 @@
 package com.hirises.satisfactorymod.blocks.custom.conveyor.entity;
 
 import com.hirises.satisfactorymod.blocks.ModBlockEntities;
-import com.hirises.satisfactorymod.blocks.ModBlocks;
 import com.hirises.satisfactorymod.blocks.custom.conveyor.block.ConveyorBase;
 import com.hirises.satisfactorymod.screen.custom.comveyor.menu.ConveyorBaseMenu;
 import net.minecraft.core.BlockPos;
@@ -16,9 +15,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Arrays;
 import java.util.List;
 
-public class ConveyorMk1Entity extends ConveyorBaseEntity{
-    public ConveyorMk1Entity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.CONVEYOR_MK1.get(), pos, state, 20, 1, 5);
+public class ConveyorMk3Entity extends ConveyorBaseEntity{
+    public ConveyorMk3Entity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.CONVEYOR_MK3.get(), pos, state, 5, 1, 5);
     }
 
     @Override
@@ -28,7 +27,7 @@ public class ConveyorMk1Entity extends ConveyorBaseEntity{
 
     @Override
     public Component getDisplayName() {
-        return Component.translatable("gui.satisfactorymod.conveyor_mk1");
+        return Component.translatable("gui.satisfactorymod.conveyor_mk3");
     }
 
     @Nullable

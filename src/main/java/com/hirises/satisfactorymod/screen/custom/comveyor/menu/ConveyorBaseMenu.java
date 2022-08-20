@@ -89,7 +89,7 @@ public class ConveyorBaseMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player pPlayer) {
         return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
-                pPlayer, ModBlocks.CONVEYOR_MK1.get());
+                pPlayer, blockEntity.getBlockState().getBlock());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
